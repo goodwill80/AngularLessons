@@ -1,0 +1,47 @@
+
+<h1>Lesson Day 4</h1>
+<h3>Events Binding - Input and Output</h3>
+<br>
+<h2>Parent</h2>
+<p>Value to be shown in the child component: <strong>{{ childValue }}</strong></p>
+<p>the <strong>#parentInput</strong> store user's input and transfer them down to the array[] in child tag below</p>
+<input type="text" #parentInput (keyup)="0"><br>
+
+
+<div class="child">
+  <child [parentValue]="parentInput.value" (childChanged)="childValue = $event"></child>
+</div>
+
+<div>
+<h3>Interpolation</h3>
+<p>{{stringInterpolation}}!!!</p>
+<p>{{numberInterpolation}} This is the number interpolation wrapped in HTML!!!</p>
+</div>
+
+<div>
+<h3>Properties and Event Binding</h3>
+<p><strong>{{property}}</strong> is a property binder</p>
+<p><strong>{{event}}</strong> is an event binder that fire off data triggered</p>
+</div>
+
+<div>
+<h3>1st method - passing value using interpolation</h3>
+<input type="text" value="{{stringInterpolation}}">
+<h3>2nd method - Property Binding by passing value defined in class into a value array bracket in HTML</h3>
+<input type="text" [value]="stringInterpolation">
+</div>
+
+
+
+<!-- <div>
+<p><strong> 1. Normal binding output with no function</strong></p>
+<input #box (keyup)="0">
+<p>{{ box.value }}</p>
+</div> -->
+
+
+<!-- <div>
+<p><strong> 2. Normal binding output with onkey event</strong></p>
+<input #box (keyup)="onkey(box.value)">
+<p>{{ box.value }}</p>
+</div> -->

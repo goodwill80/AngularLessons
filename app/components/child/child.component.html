@@ -1,0 +1,5 @@
+
+<h2>Child</h2>
+<p>value to be shown in parent component: <strong>{{ parentValue }}</strong></p>
+<p>The EventEmitter function is defined to capture user input in child and send it to the parent</p>
+<input type="text" #childInput (keyup) ="onChange(childInput.value)">
